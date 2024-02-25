@@ -6,7 +6,7 @@ const config = require("../config");
 
 // check_password function
 function check_password(req, res, next) {
-  if (req.url === "/login") {
+  if (req.url === "/register" || req.url === "/login") {
     next();
     return;
   }
@@ -14,7 +14,11 @@ function check_password(req, res, next) {
   if (userId) {
     next();
   } else {
-    res.redirect("/login");
+    res.json({
+      status: "error",
+      code: -1,
+      message: "Not logged in",
+    });
   }
 }
 
