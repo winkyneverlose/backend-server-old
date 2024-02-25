@@ -8,6 +8,10 @@ const config = require("./config");
 const express = require("express");
 const app = express();
 
+// Use the cors middleware
+const cors = require("cors");
+app.use(cors());
+
 // Load the middleware
 
 // Use body-parser middleware
@@ -54,7 +58,6 @@ class Server {
     });
 
     process.on("exit", () => {
-      console.log(close_database_connection());
       console.log("Server stopped...");
     });
   }
@@ -62,7 +65,6 @@ class Server {
   static stop() {
     // Stop the server
     app.close(() => {
-      console.log(close_database_connection());
       console.log("Server stopped...");
     });
   }
