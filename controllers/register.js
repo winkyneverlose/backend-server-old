@@ -10,7 +10,7 @@ const Register = require("../services/Register");
 // Register controller
 function register(req, res) {
   // Get the username, email, and password from the request
-  const username = req.body.username;
+  const username = req.body.username.toLowerCase();
   const email = req.body.email;
   const password = req.body.password;
   // Call the register service

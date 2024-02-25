@@ -21,7 +21,7 @@ function login(req, res) {
   }
 
   // Get the username and password from the request
-  const username = req.body.username;
+  const username = req.body.username.toLowerCase();
   const password = req.body.password;
   // Call the login service
   Login(username, password, (error, data) => {
