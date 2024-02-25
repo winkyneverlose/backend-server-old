@@ -5,6 +5,9 @@ const router = require("express").Router();
 
 // Load the routes
 
+// Get session route
+router.use("/get_session", require("./get_session"));
+
 // Login route
 router.use("/login", require("./__login"));
 
