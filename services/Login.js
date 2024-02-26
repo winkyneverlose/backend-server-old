@@ -10,6 +10,9 @@ const http = axios.create();
 
 // Login function
 function login(username, password, callback) {
+  // Username to lowercase
+  username = username.toLowerCase();
+
   // Make a POST request to the login API
   http
     .post(
