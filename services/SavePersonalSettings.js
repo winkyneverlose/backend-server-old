@@ -10,6 +10,9 @@ const http = axios.create();
 
 // SavePersonalSettings function
 function savePersonalSettings(userId, settings, callback) {
+  // Username to lowercase
+  settings.username = settings.username.toLowerCase();
+
   // Check if the avatar is valid
   if (!settings.avatarUrl) {
     callback(
