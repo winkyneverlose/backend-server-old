@@ -14,6 +14,9 @@ router.use("/login", require("./__login"));
 // Register route
 router.use("/register", require("./__register"));
 
+// Get settings route
+router.use("/get_settings", require("./__get_settings"));
+
 // Load the default route
 router.use("*", (req, res) => {
   res.status(404).json({

@@ -79,7 +79,35 @@ function register(username, email, password, callback) {
     .then((response) => {
       if (response.data.status === "success") {
         // If the registration is successful, return the data
-        callback(null, response.data);
+        http
+          .post(
+            `http://${config.db_server.host}:${config.db_server.port}/user/create`,
+            {
+              __dbPassword: config.db_server.password,
+              id: response.data.id,
+              username: username,
+              firstName: username,
+              lastName: username,
+              createdAt: Date.now(),
+              updatedAt: Date.now(),
+              gender: "unknown",
+              birthday: Date.now(),
+              bio: "",
+              educated: "",
+              language: "",
+              colorTheme: "light",
+              avatarUrl:
+                "https://raw.githubusercontent.com/winkyneverlose/static-resources/main/img/default_avatar.png",
+              coins: 0,
+            }
+          )
+          .then((response) => {
+            if (response.data.status === "success") {
+              callback(null, response.data);
+            } else {
+              callback(response.data, null);
+            }
+          });
       } else {
         // If the registration is not successful, return an error
         callback(response.data, null);

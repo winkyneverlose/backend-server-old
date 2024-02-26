@@ -8,10 +8,6 @@ const config = require("./config");
 const express = require("express");
 const app = express();
 
-// Use the cors middleware
-const cors = require("cors");
-app.use(cors());
-
 // Load the middleware
 
 // Use body-parser middleware
