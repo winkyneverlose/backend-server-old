@@ -17,6 +17,9 @@ router.use("/register", require("./__register"));
 // Get settings route
 router.use("/get_settings", require("./__get_settings"));
 
+// Update settings routes
+router.use("/save_personal_settings", require("./__save_personal_settings"));
+
 // Load the default route
 router.use("*", (req, res) => {
   res.status(404).json({
