@@ -20,6 +20,9 @@ router.use("/get_settings", require("./__get_settings"));
 // Update settings routes
 router.use("/save_personal_settings", require("./__save_personal_settings"));
 
+// Save profile settings route
+router.use("/save_profile_settings", require("./__save_profile_settings"));
+
 // Update password route
 router.use("/update_password", require("./__update_password"));
 
