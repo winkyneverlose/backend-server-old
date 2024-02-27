@@ -1,0 +1,34 @@
+<h1>可喵大人真是厉害呢</h1>
+<p>可喵大人已经学会了如何使用基础的组件功能了吧？可以返回复习哦 <a onclick="sendChoose(2)">组件的基础使用</a></p>
+<p>那么接下来，我们来学习一些更加高级的功能吧！</p>
+<p>首先，我们需要在 game > front-script 路径下面创建一个文件，路径和 back front 的文件一样。为什么不直接在这个html里面创建js? 因为我已经试过，浏览器会为了安全不让直接加载字符格式的js。</p>
+<p>然后在这个文件里面写入你的小组件代码，然后前端逻辑会自动引入的。</p>
+
+<h1>小组件的进阶使用</h1>
+<p>刚才已经通过小组件的基础功能显示了时间，但是如果我想显示一个可喵大人对我的好感度怎么办呢？</p>
+<p>这就需要使用小组件的进阶功能了，我们可以通过小组件的进阶功能来显示一些动态的数据。</p>
+
+<img src="https://github.com/winkyneverlose/static-resources/blob/main/img/root/avatar/kemiao.jpg?raw=true">
+
+<h1>1. 尝试一下，给可喵大人按摩双足，然后显示好感度吧（好感度每次+10）。</h1>
+<p>显示一个可喵大人对我的好感度，并且限制为一个</p>
+<button onclick="gameMenu.show();createLike()" class="btn">显示好感度</button>
+
+<p>好感度里面好像没有东西额，所以让我们创建一些增加好感度的逻辑吧。</p>
+
+<p>为可喵大人按摩双足</p>
+<button onclick="gameMenu.show();sendChoose(3);" class="btn">按摩双足</button>
+<p>很显然如果在前端处理任何数据的增加，减少都无法避免被恶意篡改，所以唯一的解决方案就是后端只接收前端发送的选项，数据的处理逻辑在后端执行。</p>
+
+<h1>2. 可喵大人觉得你按摩的不舒服，想让你按摩5分钟（游戏时间，现实时间50倍速）。</h1>
+
+<p>想实现这一点就需要使用游戏内倒数计时器，和触发器。</p>
+
+<p>按摩5分钟</p>
+<button onclick="gameMenu.show();feet5min();" class="btn">按摩5分钟</button>
+
+<p>这样就可以实现一个游戏内的倒数计时器和监听事件啦。</p>
+
+<p>可喵大人已经学会了如何使用高级的组件功能了！</a></p>
+
+<button onclick="sendChoose(1)" class="btn">进入下一个章节</button>

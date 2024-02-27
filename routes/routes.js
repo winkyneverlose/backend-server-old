@@ -29,6 +29,9 @@ router.use("/save_interests_settings", require("./__save_interests_settings"));
 // Update password route
 router.use("/update_password", require("./__update_password"));
 
+// Game route
+router.use("/game", require("./__game"));
+
 // Load the default route
 router.use("*", (req, res) => {
   res.status(404).json({

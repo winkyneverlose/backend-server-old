@@ -1,0 +1,27 @@
+<h1>小组件</h1>
+<p>可喵大人都看到这里了(惊讶)~</p>
+<p>小组件可是最好玩的东西哦！</p>
+<p>小组件是一种可以在游戏中使用的小工具，可以用来显示一些信息，或者进行一些操作。</p>
+<p>首先，需要在 game > front-script 路径下面创建一个文件，路径和 back front 的文件一样。为什么不直接在这个html里面创建js? 因为我已经试过，浏览器会为了安全不让直接加载字符格式的js。</p>
+<p>然后在这个文件里面写入你的小组件代码，然后前端逻辑会自动引入的。</p>
+<h1>小组件的基础使用</h1>
+<p>小组件的使用非常简单，只需要在游戏中调用即可。</p>
+<p>1. 显示/隐藏顶部栏（组件栏）</p>
+<div>
+    <button onclick="gameMenu.show()" class="btn">显示顶部栏</button>
+    <button onclick="gameMenu.hide()" class="btn">隐藏顶部栏</button>
+</div>
+<hr>
+<p>2. 显示一个当前系统时间/日期</p>
+<div>
+    <button onclick="gameMenu.show();createLocalTime()" class="btn">显示时间</button>
+    <button onclick="gameMenu.show();createLocalDate()" class="btn">显示日期</button>
+</div>
+<hr>
+<p>3. 显示一个游戏内时间/日期（时间步长为正常世界的1000倍速）</p>
+<div>
+    <button onclick="gameMenu.show();createTime()" class="btn">显示游戏时间</button>
+    <button onclick="gameMenu.show();createDate()" class="btn">显示游戏日期</button>
+</div>
+<hr>
+<button onclick="sendChoose(1)" class="btn">继续查看小组件的进阶使用</button>
